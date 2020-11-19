@@ -65,7 +65,7 @@ public class WareHouse {
 
     public boolean hasRegistrationNumber(String string){
         for(Car car : cars){
-            if(car.getRegistrationNumber().equals(string))
+            if(car.getRegistrationNumber().equalsIgnoreCase(string))
                 return true;
         }
         return false;
@@ -79,7 +79,7 @@ public class WareHouse {
     public void deleteCarByRegistrationNumber(String string){
         try{
             for(Car car:cars)
-                if (car.getRegistrationNumber().equals(string))
+                if (car.getRegistrationNumber().equalsIgnoreCase(string))
                     cars.remove(car);
         }catch(Exception e) {
 
@@ -89,7 +89,7 @@ public class WareHouse {
 
     public Car getCarByRegistrationNumber(String string){
         for(Car car : cars){
-            if(car.getRegistrationNumber().equals(string))
+            if(car.getRegistrationNumber().equalsIgnoreCase(string))
                 return car;
         }
         return null;
