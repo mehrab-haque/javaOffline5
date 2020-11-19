@@ -97,7 +97,7 @@ public class Main {
         try{
             String value=scanner.nextLine();
             if(value.trim().length()>0){
-                if(wareHouse.hasRehistrationNumber(value)) {
+                if(wareHouse.hasRegistrationNumber(value)) {
                     wareHouse.deleteCarByRegistrationNumber(value);
                     System.out.println("Car removed from the warehouse successfully and database updated.");
                     mainMenu();
@@ -121,7 +121,7 @@ public class Main {
         String value;
         try{
             value=scanner.nextLine();
-            if(!wareHouse.hasRehistrationNumber(value) && value.trim().length()>0)
+            if(!wareHouse.hasRegistrationNumber(value) && value.trim().length()>0)
                 return value;
             else{
                 System.out.println("Error : registration number must be a non-empty string and unique.");
@@ -241,7 +241,7 @@ public class Main {
         try{
             String value=scanner.nextLine();
             if(value.trim().length()>0){
-                if(wareHouse.hasRehistrationNumber(value)) {
+                if(wareHouse.hasRegistrationNumber(value)) {
                     System.out.println("Car found, details is below:");
                     System.out.println(wareHouse.getCarByRegistrationNumber(value));
                     System.out.println("Press enter to return back to car searching menu.");

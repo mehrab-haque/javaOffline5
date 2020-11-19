@@ -63,7 +63,7 @@ public class WareHouse {
         }
     }
 
-    public boolean hasRehistrationNumber(String string){
+    public boolean hasRegistrationNumber(String string){
         for(Car car : cars){
             if(car.getRegistrationNumber().equals(string))
                 return true;
